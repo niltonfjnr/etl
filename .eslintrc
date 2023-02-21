@@ -1,0 +1,20 @@
+{
+    "rules": {
+        "semi": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "no-undef": "error",
+        "no-var": "error",
+        "no-use-before-define": "error",
+        "eol-last": "error"
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2023
+    }
+}
