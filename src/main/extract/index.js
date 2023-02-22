@@ -16,7 +16,7 @@ class ExtractPipeline {
     /**
      * @returns {Promise<ExtractedExoplanetModel[]>} 
      */
-    getAllPlanets = (params = PARAMS) => {
+    getAllExtractedPlanets = (params = PARAMS) => {
         // eslint-disable-next-line no-undef
         const promise = new Promise((resolve, reject) => {
             let data = '';

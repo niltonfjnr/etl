@@ -2,15 +2,16 @@ import { describe, it, expect, jest } from '@jest/globals';
 import { ExtractPipeline } from '.';
 
 const makeSut = () => new ExtractPipeline();
+const functionsReference = makeSut();
 
-describe(ExtractPipeline.getAllPlanets, () => {
+describe(functionsReference.getAllExtractedPlanets.name, () => {
     const testTimeoutValue = 30000;
     jest.setTimeout(testTimeoutValue);
 
     it('should get all planets', async () => {
         const sut = makeSut();
         const minimumSize = 0;
-        const result = await sut.getAllPlanets();
+        const result = await sut.getAllExtractedPlanets();
 
         expect(result).toBeTruthy();
         expect(Array.isArray(result)).toBe(true);
@@ -20,7 +21,7 @@ describe(ExtractPipeline.getAllPlanets, () => {
         const sut = makeSut();
 
         try {
-            await sut.getAllPlanets({});
+            await sut.getAllExtractedPlanets({});
 
         } catch (error) {
             expect(error).toBeTruthy();
