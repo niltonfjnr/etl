@@ -5,7 +5,18 @@ const PARAMS = {
     format: 'json'
 };
 
+const ENCODING = 'utf8';
+
+const EVENT_NAME_ERROR = 'error';
+const EVENT_NAME_DATA = 'data';
+const EVENT_NAME_END = 'end';
+
 export {
     API_URL,
-    PARAMS
+    PARAMS,
+    ENCODING,
+
+    EVENT_NAME_ERROR,
+    EVENT_NAME_DATA,
+    EVENT_NAME_END
 };
