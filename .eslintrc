@@ -11,7 +11,10 @@
         "no-undef": "error",
         "no-var": "error",
         "no-use-before-define": "error",
-        "eol-last": "error"
+        "eol-last": "error",
+        "no-magic-numbers": "error",
+        "prefer-const": "error",
+        "no-throw-literal": "error"
     },
     "parserOptions": {
         "sourceType": "module",
