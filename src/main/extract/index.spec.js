@@ -17,7 +17,7 @@ describe(functionsReference.httpGet.name, () => {
     });
 });
 
-describe(functionsReference.getAllPlanets.name, () => {
+describe(functionsReference.getAllExtractedPlanets.name, () => {
     it('should get all planets', () => {
         const sut = makeSut();
         const expectedTimes = 1;
@@ -28,14 +28,14 @@ describe(functionsReference.getAllPlanets.name, () => {
         const httpGetSpy = jest.spyOn(sut, functionsReference.httpGet.name);
         httpGetSpy.mockReturnValueOnce(mockResult);
         
-        sut.getAllPlanets();
+        sut.getAllExtractedPlanets();
 
         expect(httpGetSpy).toHaveBeenCalledTimes(expectedTimes);
     });
     it('should throw an error', async () => {
         const sut = makeSut();
         const mockResult = 'any_error';
-        const httpGetSpy = jest.spyOn(sut, 'httpGet');
+        const httpGetSpy = jest.spyOn(sut, functionsReference.httpGet.name);
         const mockResultCallback = {
             on: () => {},
             end: () => { throw mockResult; }
@@ -43,7 +43,7 @@ describe(functionsReference.getAllPlanets.name, () => {
         httpGetSpy.mockReturnValueOnce(mockResultCallback);
         
         try {
-            await sut.getAllPlanets();
+            await sut.getAllExtractedPlanets();
         } catch (error) {
             expect(error).toBe(mockResult);
         }

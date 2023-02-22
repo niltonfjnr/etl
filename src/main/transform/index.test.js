@@ -1,17 +1,17 @@
 import { describe, it, expect, jest } from '@jest/globals';
-import { ExtractPipeline } from '.';
+import { TransformPipeline } from '.';
 
-const makeSut = () => new ExtractPipeline();
+const makeSut = () => new TransformPipeline();
 const functionsReference = makeSut();
 
-describe(functionsReference.getAllExtractedPlanets.name, () => {
+describe(functionsReference.getAllTransformedPlanets.name, () => {
     const testTimeoutValue = 30000;
     jest.setTimeout(testTimeoutValue);
 
     it('should get all planets', async () => {
         const sut = makeSut();
         const minimumSize = 0;
-        const result = await sut.getAllExtractedPlanets();
+        const result = await sut.getAllTransformedPlanets();
 
         expect(result).toBeTruthy();
         expect(Array.isArray(result)).toBe(true);
