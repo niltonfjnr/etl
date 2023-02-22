@@ -1,0 +1,113 @@
+class ExtractedExoplanetModel {
+    /**
+     * @param {{
+     * dec_str: string;
+     * kepid: number;
+     * kepler_name: string;
+     * kepoi_name: string;
+     * koi_depth: number;
+     * koi_depth_err1: number;
+     * koi_depth_err2: number;
+     * koi_disposition: string;
+     * koi_duration: number;
+     * koi_duration_err1: number;
+     * koi_duration_err2: number;
+     * koi_fpflag_co: number;
+     * koi_fpflag_ec: number;
+     * koi_fpflag_nt: number;
+     * koi_fpflag_ss: number;
+     * koi_impact: number;
+     * koi_impact_err1: number;
+     * koi_impact_err2: number;
+     * koi_insol: number;
+     * koi_insol_err1: number;
+     * koi_insol_err2: number;
+     * koi_kepmag: number;
+     * koi_kepmag_err: number;
+     * koi_model_snr: number;
+     * koi_pdisposition: string;
+     * koi_period: number;
+     * koi_period_err1: number;
+     * koi_period_err2: number;
+     * koi_prad: number;
+     * koi_prad_err1: number;
+     * koi_prad_err2: number;
+     * koi_score: number;
+     * koi_slogg: number;
+     * koi_slogg_err1: number;
+     * koi_slogg_err2: number;
+     * koi_srad: number;
+     * koi_srad_err1: number;
+     * koi_srad_err2: number;
+     * koi_steff: number;
+     * koi_steff_err1: number;
+     * koi_steff_err2: number;
+     * koi_tce_delivname: string;
+     * koi_tce_plnt_num: number;
+     * koi_teq: number;
+     * koi_teq_err1: number;
+     * koi_teq_err2: number;
+     * koi_time0bk: number;
+     * koi_time0bk_err1: number;
+     * koi_time0bk_err2: number;
+     * ra_str: string;
+     * 
+     * }} initData 
+     */
+    constructor(initData) {
+        this.dec_str = initData.dec_str;
+        this.kepid = initData.kepid;
+        this.kepler_name = initData.kepler_name;
+        this.kepoi_name = initData.kepoi_name;
+        this.koi_depth = initData.koi_depth;
+        this.koi_depth_err1 = initData.koi_depth_err1;
+        this.koi_depth_err2 = initData.koi_depth_err2;
+        this.koi_disposition = initData.koi_disposition;
+        this.koi_duration = initData.koi_duration;
+        this.koi_duration_err1 = initData.koi_duration_err1;
+        this.koi_duration_err2 = initData.koi_duration_err2;
+        this.koi_fpflag_co = initData.koi_fpflag_co;
+        this.koi_fpflag_ec = initData.koi_fpflag_ec;
+        this.koi_fpflag_nt = initData.koi_fpflag_nt;
+        this.koi_fpflag_ss = initData.koi_fpflag_ss;
+        this.koi_impact = initData.koi_impact;
+        this.koi_impact_err1 = initData.koi_impact_err1;
+        this.koi_impact_err2 = initData.koi_impact_err2;
+        this.koi_insol = initData.koi_insol;
+        this.koi_insol_err1 = initData.koi_insol_err1;
+        this.koi_insol_err2 = initData.koi_insol_err2;
+        this.koi_kepmag = initData.koi_kepmag;
+        this.koi_kepmag_err = initData.koi_kepmag_err;
+        this.koi_model_snr = initData.koi_model_snr;
+        this.koi_pdisposition = initData.koi_pdisposition;
+        this.koi_period = initData.koi_period;
+        this.koi_period_err1 = initData.koi_period_err1;
+        this.koi_period_err2 = initData.koi_period_err2;
+        this.koi_prad = initData.koi_prad;
+        this.koi_prad_err1 = initData.koi_prad_err1;
+        this.koi_prad_err2 = initData.koi_prad_err2;
+        this.koi_score = initData.koi_score;
+        this.koi_slogg = initData.koi_slogg;
+        this.koi_slogg_err1 = initData.koi_slogg_err1;
+        this.koi_slogg_err2 = initData.koi_slogg_err2;
+        this.koi_srad = initData.koi_srad;
+        this.koi_srad_err1 = initData.koi_srad_err1;
+        this.koi_srad_err2 = initData.koi_srad_err2;
+        this.koi_steff = initData.koi_steff;
+        this.koi_steff_err1 = initData.koi_steff_err1;
+        this.koi_steff_err2 = initData.koi_steff_err2;
+        this.koi_tce_delivname = initData.koi_tce_delivname;
+        this.koi_tce_plnt_num = initData.koi_tce_plnt_num;
+        this.koi_teq = initData.koi_teq;
+        this.koi_teq_err1 = initData.koi_teq_err1;
+        this.koi_teq_err2 = initData.koi_teq_err2;
+        this.koi_time0bk = initData.koi_time0bk;
+        this.koi_time0bk_err1 = initData.koi_time0bk_err1;
+        this.koi_time0bk_err2 = initData.koi_time0bk_err2;
+        this.ra_str = initData.ra_str;
+    }
+};
+
+export {
+    ExtractedExoplanetModel
+};
