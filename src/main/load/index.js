@@ -10,9 +10,9 @@ class LoadPipeline {
     /**
      * @returns {Promise<void>} 
      */
-    loadAllTransformedPlanets = async (params) => {
+    loadAllTransformedPlanets = async (sufix, params) => {
         const planetList = await this.transformPipeline.getAllTransformedPlanets(params);
-        await this.loadExoplanetList.load(planetList);
+        await this.loadExoplanetList.load(planetList, sufix);
     };
 }
 
