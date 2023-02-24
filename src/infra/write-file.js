@@ -13,7 +13,10 @@ const sufixBuilder = () => new Date().getTime();
 const writeFilePromised = (data, sufix = sufixBuilder()) => {
     const stringifiedData = JSON.stringify(data, null, IDENTATION_SPACE);
     const filePromise = promisify(fs.writeFile);
-    return filePromise(`${OUTPUT_FILE_PATH}-${sufix}.json`, stringifiedData);
+    // eslint-disable-next-line no-undef
+    const url = new URL(`${OUTPUT_FILE_PATH}-${sufix}.json`, import.meta.url);
+
+    return filePromise(url, stringifiedData);
 };
 
 export {

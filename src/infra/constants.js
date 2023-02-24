@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-undef
-const OUTPUT_FILE_PATH = `${__dirname}/../../loaded/out`;
+const OUTPUT_FILE_PATH = '../../loaded/out';
 const IDENTATION_SPACE = 2;
 
 export {

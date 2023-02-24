@@ -14,12 +14,13 @@ describe(functionsReference.loadAllTransformedPlanets.name, () => {
     it('should get all planets', async () => {
         const sut = makeSut();
         const fileSufix = sufixBuilder();
+        const testFilePath = `../../../loaded/out-${fileSufix}.json`;
         // eslint-disable-next-line no-undef
-        const testFilePath = `${__dirname}/../../../loaded/out-${fileSufix}.json`;
+        const url = new URL(testFilePath, import.meta.url);
         
         await sut.loadAllTransformedPlanets(fileSufix);
-        const exists = existsSync(testFilePath);
-        rmSync(testFilePath);
+        const exists = existsSync(url);
+        rmSync(url);
 
         expect(exists).toBe(true);
     });
