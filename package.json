@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "./src/index.js",
+  "main": "./src/main/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "node ./src/main/index.js",
     "test": "npm run tests-with-jest",
     "tests-with-jest": "jest",
     "lint": "eslint **/*.js"
