@@ -1,7 +1,8 @@
-import { IDENTATION_SPACE, OUTPUT_FILE_PATH } from './constants';
+import { FILE_EXTENSION, IDENTATION_SPACE, OUTPUT_FILE_PATH } from './constants';
 
 import { promisify } from 'util';
-import * as fs from 'fs';
+import { writeFile } from 'fs';
+import { URL } from 'url';
 
 const sufixBuilder = () => new Date().getTime();
 
@@ -12,9 +13,8 @@ const sufixBuilder = () => new Date().getTime();
  */
 const writeFilePromised = (data, sufix = sufixBuilder()) => {
     const stringifiedData = JSON.stringify(data, null, IDENTATION_SPACE);
-    const filePromise = promisify(fs.writeFile);
-    // eslint-disable-next-line no-undef
-    const url = new URL(`${OUTPUT_FILE_PATH}-${sufix}.json`, import.meta.url);
+    const filePromise = promisify(writeFile);
+    const url = new URL(`${OUTPUT_FILE_PATH}-${sufix}${FILE_EXTENSION}`, import.meta.url);
 
     return filePromise(url, stringifiedData);
 };

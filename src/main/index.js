@@ -1,10 +1,9 @@
 import { LoadPipeline } from './load';
 
-// EXTRACT/TRANSFORM/LOAD
-// FULL PIPELINE
-const main = () => {
-    const loadPipeline = new LoadPipeline();
-    loadPipeline.loadAllTransformedPlanets();
-};
-
-main();
+/**
+ * EXTRACT/TRANSFORM/LOAD
+ * FULL PIPELINE
+ * @returns {Promise<void>}
+ */
+const main = () => new LoadPipeline().loadAllTransformedPlanets();
+void main();

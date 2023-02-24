@@ -1,8 +1,9 @@
 import { LoadPipeline } from '.';
 import { sufixBuilder } from '../../infra/write-file';
 
-import { existsSync, rmSync } from 'fs';
 import { describe, it, expect, jest } from '@jest/globals';
+import { existsSync, rmSync } from 'fs';
+import { URL } from 'url';
 
 const makeSut = () => new LoadPipeline();
 const functionsReference = makeSut();
@@ -15,7 +16,6 @@ describe(functionsReference.loadAllTransformedPlanets.name, () => {
         const sut = makeSut();
         const fileSufix = sufixBuilder();
         const testFilePath = `../../../loaded/out-${fileSufix}.json`;
-        // eslint-disable-next-line no-undef
         const url = new URL(testFilePath, import.meta.url);
         
         await sut.loadAllTransformedPlanets(fileSufix);

@@ -1,5 +1,6 @@
 import { ExtractedExoplanetModel } from '../../domain/models/extracted-exoplanet';
 import { ExtractExoplanetList } from '../../domain/use-cases/extract-exoplanet-list';
+import { Promise } from '../../infra/promise';
 
 import { API_URL, ENCODING, EVENT_NAME_DATA, EVENT_NAME_END, EVENT_NAME_ERROR, PARAMS } from './constants';
 
@@ -17,8 +18,7 @@ class ExtractPipeline {
      * @returns {Promise<ExtractedExoplanetModel[]>} 
      */
     getAllExtractedPlanets = (params = PARAMS) => {
-        // eslint-disable-next-line no-undef
-        const promise = new Promise((resolve, reject) => {
+        const promiseBehavior = (resolve, reject) => {
             let data = '';
             const queryString = stringify(params);
             const endPoint = `${API_URL}?${queryString}`;
@@ -38,8 +38,8 @@ class ExtractPipeline {
             const req = this.httpGet(endPoint, onResultCallback);
             req.on(EVENT_NAME_ERROR, (e) => reject(e));
             req.end();
-        });
-        return promise;
+        };
+        return new Promise(promiseBehavior);
     };
 }
 
