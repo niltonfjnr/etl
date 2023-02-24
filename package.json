@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./src/main/index.js",
   "scripts": {
-    "start": "node --experimental-specifier-resolution=node ./src/main/index.js",
+    "start": "npm ci && node --experimental-specifier-resolution=node ./src/main/index.js",
     "test": "npm run tests-with-jest",
     "tests-with-jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint **/*.js"
